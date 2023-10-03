@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permission To Date My Daughter/Son</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Permission To Date My Daughter Application</h1>
+    
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <!-- Personal Details -->
+        <h2>Personal Details</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number (Numeric Only):</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label><br><br>
+        
+        <label for="date">Date of Proposed Outing:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="checklist">Check all that apply to you:</label><br>
+        <input type="checkbox" id="tattoos" name="checklist[]" value="Tattoos and/or Piercings">
+        <label for="tattoos">I have tattoos and/or piercings</label><br>
+        <input type="checkbox" id="age" name="checklist[]" value="More than 2 years older than my daughter">
+        <label for="age">I am more than 2 years older than my daughter</label><br>
+        <input type="checkbox" id="vehicle" name="checklist[]" value="Own a panel van or Ferrari">
+        <label for="vehicle">I own a panel van or Ferrari</label><br>
+        <input type="checkbox" id="fulltime" name="checklist[]" value="Work full-time">
+        <label for="fulltime">I work full-time</label><br>
+        <input type="checkbox" id="richparents" name="checklist[]" value="My parents are rich">
+        <label for="richparents">My parents are rich</label><br>
+        
+        <label for="location">Is the date at a private/public location:</label>
+        <select id="location" name="location" required>
+            <option value="private">Private</option>
+            <option value="public">Public</option>
+        </select><br><br>
+        
+        <!-- Education Level -->
+        <label for="education">Education Level Completed:</label>
+        <select id="education" name="education" required>
+            <option value="highschool">High School</option>
+            <option value="undergrad">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+            <option value="postgrad">Postgraduate</option>
+        </select><br><br>
+        
+        <!-- Essay Section -->
+        <label for="essay">Why do you want to date my daughter (50 words):</label><br>
+        <textarea id="essay" name="essay" rows="4" cols="50" maxlength="50" required></textarea><br><br>
+        
+        <!-- Contact Point for Reference -->
+        <label for="reference">Provide 1 Contact Point for Reference:</label>
+        <input type="text" id="reference" name="reference" required><br><br>
+        
+        <!-- Upload Bank Statement -->
+        <label for="bankStatement">Upload Bank Statement (PDF only):</label>
+        <input type="file" id="bankStatement" name="bankStatement" accept=".pdf" required><br><br>
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
